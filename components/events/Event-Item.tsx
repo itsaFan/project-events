@@ -5,6 +5,7 @@ import Button from "../UI/Button";
 import DateIcon from "../icons/date-icon";
 import AddressIcon from "../icons/address-icon";
 import ArrowRightIcon from "../icons/arrow-right-icon";
+import Image from "next/image";
 
 const EventItem: React.FC<Event> = ({ title, image, date, location, id }) => {
   const readableDate = new Date(date).toLocaleDateString("en-US", {
@@ -18,7 +19,8 @@ const EventItem: React.FC<Event> = ({ title, image, date, location, id }) => {
   return (
     <div>
       <li className={classes.item}>
-        <img src={"/" + image} alt={title} />
+        <Image src={"/" + image} alt={title} width={550} height={260} />
+        {/* <img src={"/" + image} alt={title} /> */}
         <div className={classes.content}>
           <div className={classes.summary}>
             <h2>{title}</h2>

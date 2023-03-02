@@ -2,6 +2,7 @@ import classes from "./css/event-logistics.module.css";
 import LogisticsItem from "./logistics-item";
 import DateIcon from "../icons/date-icon";
 import AddressIcon from "../icons/address-icon";
+import Image from "next/image";
 
 type Props = {
   date: string;
@@ -24,7 +25,8 @@ export default function EventLogistics(props: Props) {
   return (
     <section className={classes.logistics}>
       <div className={classes.image}>
-        <img src={`/${image}`} alt={imageAlt} />
+        <Image src={`/${image}`} alt={imageAlt} width={760} height={760} />
+        {/* <img src={`/${image}`} alt={imageAlt} /> */}
       </div>
       <ul className={classes.list}>
         <LogisticsItem icon={DateIcon}>

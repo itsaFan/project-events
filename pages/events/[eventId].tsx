@@ -27,7 +27,7 @@ export default function EventDetailPage(props: EventDetailPageProps) {
 
   return (
     <Fragment>
-      <PageHead pageTitle="Event Detail" />
+      <PageHead pageTitle={event.title} />
       <EventSummary title={event.title} />
       <EventLogistics date={event.date} address={event.location} image={event.image} imageAlt={event.title} />
       <EventContent>
